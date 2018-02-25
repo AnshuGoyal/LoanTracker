@@ -7,7 +7,11 @@ var userSchema = new Schema(
   {
     name: String,
     username: { type: String, required: true, unique: true },
-    password: { type: String, required: true }
+    password: { type: String, required: true },
+    regDate: { type: Date, default: Date.now },
+    loginDate: { type: Date, default: Date.now },
+    phone: Number,
+    emailVerified: { type: Boolean, default: false }
   }
 );
 
