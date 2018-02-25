@@ -1,0 +1,21 @@
+{
+  "name": "loan_tracker",
+  "version": "1.0.0",
+  "description": "Manage Loans",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33",
+    "mongoose": "^5.0.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "author": "Anshu Goyal",
+  "license": "MIT"
+}
