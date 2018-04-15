@@ -4,7 +4,6 @@ const apiLogin = require('./../controllers/apiLogin');
 const apiSignup = require('./../controllers/apiSignup');
 const apiUsers = require('./../controllers/apiUsers');
 const apiSingleUser = require('./../controllers/apiSingleUser');
-
 const beneficiary = require('../controllers/beneficiary.controller.js');
 const transaction = require('../controllers/transection.controller.js');
 const userNotification = require('../controllers/userNotification.controller.js');
