@@ -17,14 +17,13 @@ module.exports = function(req, res){
 
   var newUser = OAuthUsersModel({
     email:  req.body.email,
-    firstname: req.body.firstname,
-    lastname: req.body.lastname,
+    name: req.body.firstname,
     password: req.body.password,
-    username: req.body.username
+    mobile: req.body.username
   });
 
   OAuthUsersModel.findOne({
-    username: req.body.username
+    email: req.body.email
   },function(err, user) {
     if (err) {
       res.send('Error fetching User!');

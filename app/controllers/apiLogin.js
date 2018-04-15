@@ -26,7 +26,7 @@ module.exports = function(req, res){
           client_id: 'LoanTrack',
           client_secret: '123',
           grant_type: 'password',
-          username: req.body.username,
+          email: req.body.email,
           password: req.body.password,
       }
   });
@@ -37,7 +37,7 @@ module.exports = function(req, res){
   };
 
   OAuthTokensModel.findOne({
-    "user.username": req.body.username,
+    "user.email": req.body.email,
     "user.password": req.body.password
   },
   function(err, user) {
@@ -57,7 +57,7 @@ module.exports = function(req, res){
         .catch((err) => {
           // The request was invalid or not authorized.
           console.log(err);
-          res.send('User not registered!');
+          res.send('Token not generated!');
       });
     }
 

@@ -11,10 +11,14 @@ var Schema = mongoose.Schema;
 
 mongoose.model('OAuthUsers', new Schema({
   email:    { type: String, required: true  },
-  firstname:{ type: String, required: true },
-  lastname: { type: String },
+  name:     { type: String, required: true },
   password: { type: String, required: true  },
-  username: { type: String, required: true  }
+  mobile:   { type: String },
+  isEmailVerified: { type: Boolean, default: false },
+  isPhoneVerified: { type: Boolean, default: false },
+  additionalDetails: { type: String }
+}, {
+    timestamps: true
 }));
 
 

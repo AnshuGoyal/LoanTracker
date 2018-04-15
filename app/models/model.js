@@ -15,8 +15,8 @@ const model = {
     return OAuthClientsModel.findOne({ clientId: clientId, clientSecret: clientSecret }).lean();
   },
 
-  getUser: function(username, password) {
-    return OAuthUsersModel.findOne({ username: username, password: password }).lean();
+  getUser: function(email, password) {
+    return OAuthUsersModel.findOne({ email: email, password: password }).lean();
   },
 
   saveToken: function(token, client, user) {
