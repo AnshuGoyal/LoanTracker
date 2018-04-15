@@ -36,8 +36,6 @@ module.exports = function(req, res){
     accessTokenLifetime: 3600
   };
 
-  console.log(request);
-
   OAuthTokensModel.findOne({
     "user.username": req.body.username,
     "user.password": req.body.password
