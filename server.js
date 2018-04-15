@@ -4,6 +4,7 @@ const bodyParser         = require('body-parser');
 const db                 = require('./config/db');
 const app                = express();
 
+// Application Start at 8000 port
 const port = 8000;
 
 app.use(bodyParser.json());
