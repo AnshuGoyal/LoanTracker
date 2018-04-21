@@ -3,7 +3,7 @@
 const apiLogin = require('./../controllers/apiLogin');
 const apiSignup = require('./../controllers/apiSignup');
 const apiUsers = require('./../controllers/apiUsers');
-const apiSingleUser = require('./../controllers/apiSingleUser');
+const apiUser = require('./../controllers/apiUser');
 const beneficiary = require('../controllers/beneficiary.controller.js');
 const transaction = require('../controllers/transection.controller.js');
 const userNotification = require('../controllers/userNotification.controller.js');
@@ -15,7 +15,7 @@ module.exports = function(app) {
   app.post('/api/login', apiLogin);
   app.post('/api/signup', apiSignup);
   app.get('/api/users', apiUsers);
-  app.get('/api/user/:userId', apiSingleUser);
+  app.get('/api/user/:userId', apiUser.getUser);
 
   // Create a new Beneficiary
   app.post('/beneficiary', beneficiary.create);
